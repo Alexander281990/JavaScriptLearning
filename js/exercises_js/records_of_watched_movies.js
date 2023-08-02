@@ -16,12 +16,12 @@ const personalMovieDB = {
 
 // 3
 
-const lastMovieFirstQuestion = prompt("Один из просмотренных последних фильмов", ""),
-      filmScoreFirst = +prompt("На сколько оцените его?", ""),
-      lastMovieSecondQuestion = prompt("Один из просмотренных последних фильмов", ""),
-      filmScoreSecond = +prompt("На сколько оцените его?", "");
-personalMovieDB.movies[lastMovieFirstQuestion] = filmScoreFirst;
-personalMovieDB.movies[lastMovieSecondQuestion] = filmScoreSecond;
+for(let i = 0; i < 2; i ++) {
+    const lastMovieFirstQuestion = prompt("Один из просмотренных последних фильмов", ""),
+          filmScoreFirst = +prompt("На сколько оцените его?", "");
+
+    personalMovieDB.movies[lastMovieFirstQuestion] = filmScoreFirst;
+}
 // или можно записать по другому
 // personalMovieDB["movies"][lastMovieFirstQuestion] = filmScoreFirst; // так тоже работает
 // personalMovieDB["movies"][lastMovieSecondQuestion] = filmScoreSecond; // так тоже работает
