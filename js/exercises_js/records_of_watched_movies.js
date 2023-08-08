@@ -2,9 +2,18 @@
 
 // 1
 
-const ansver = +prompt("Скодько фильмов вы уже посмотрели?", "");
+let ansver;
 
-// 2
+// функция постоянно задает вопрос один и тот-же вопрос, если пользователь ничего не ввел, ввел не цифры, или 
+// сразу нажал на кнопку "ok"
+function start() {
+    ansver = +prompt("Скодько фильмов вы уже посмотрели?", "");
+    while(ansver == "" || ansver == null || isNaN(ansver)) {
+            // метод isNaN(answer) вернет правду, если в answer нехадится НЕ число
+            ansver = +prompt("Скодько фильмов вы уже посмотрели?", "");
+    }
+}
+start();
 
 const personalMovieDB = {
     "count": ansver,
