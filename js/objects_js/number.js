@@ -50,4 +50,17 @@ console.log(y); // 0.1
 console.log(x === y); // false. Два значения не одинаковы
 // Из-за ошибки округления имеется разница между x и y
 
+// Преобразования в Number
 
+// Метод toString()
+let n = 17;
+let binary = "Ob" + n.toString(2);
+console.log(binary);
+let octal = "Oo" + n.toString(8);
+let hex = "Ox" + n.toString(16);
+
+// toFixed
+let t = 123.4356778
+console.log(t.toFixed(0)); // => 123
+console.log(t.toFixed(2)); // => 123.43
+console.log(t.toFixed(5)); // => 123.43567
